@@ -20,5 +20,7 @@ provider "aws" {
   endpoints {
     s3         = "http://localhost:4566"
     cloudfront = "http://localhost:4566"
+    acm        = "http://localhost:4566"
+    route53    = "http://localhost:4566"
   }
 }
