@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1e1e2e">
+  <meta name="description" content="A static site served from a private S3 bucket through CloudFront.">
+  <title>Site deployed</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%23a6e3a1'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main>
+    <section class="terminal" aria-label="Deployment log">
+      <div class="terminal-head"><span class="prompt">$</span> terraform apply</div>
+      <ul class="log">
+        <li style="--i:0"><span class="name">aws_s3_bucket.site</span><span class="ok">created</span></li>
+        <li style="--i:1"><span class="name">aws_s3_bucket_public_access_block.site</span><span class="ok">created</span></li>
+        <li style="--i:2"><span class="name">aws_cloudfront_origin_access_control.oac</span><span class="ok">created</span></li>
+        <li style="--i:3"><span class="name">aws_cloudfront_distribution.cdn</span><span class="ok">created</span></li>
+        <li style="--i:4"><span class="name">aws_s3_object.files</span><span class="ok">created</span></li>
+        <li class="summary" style="--i:5"><span>Apply complete! 5 resources added.</span></li>
+      </ul>
+    </section>
+
+    <section class="result">
+      <svg class="check" viewBox="0 0 88 88" aria-hidden="true">
+        <circle cx="44" cy="44" r="40"/>
+        <path d="M28 45 L40 57 L61 32"/>
+      </svg>
+      <h1>Site deployed</h1>
+      <p class="lede">Served from a private S3 bucket through CloudFront.</p>
+      <p class="hint">Edit <code>site/index.html</code> and run <code>terraform apply</code> to update.</p>
+    </section>
+  </main>
+</body>
+</html>

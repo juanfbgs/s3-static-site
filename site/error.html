@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1e1e2e">
+  <title>Page not found</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%23f38ba8'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <main>
+    <section class="terminal" aria-label="Request log">
+      <div class="terminal-head"><span class="prompt">$</span> curl -I /requested-page</div>
+      <ul class="log">
+        <li style="--i:0"><span class="name">GET /requested-page</span><span class="fail">404 not found</span></li>
+        <li class="summary" style="--i:1"><span>No matching object in the bucket.</span></li>
+      </ul>
+    </section>
+
+    <section class="result error" style="animation-delay:1.6s">
+      <svg class="check" width="88" height="88" viewBox="0 0 88 88" aria-hidden="true">
+        <circle cx="44" cy="44" r="40" style="animation-delay:1.7s"/>
+        <path d="M31 31 L57 57 M57 31 L31 57" style="animation-delay:2.3s"/>
+      </svg>
+      <h1>Page not found</h1>
+      <p class="lede">That file isn't in the bucket. Check the address or go back to the home page.</p>
+      <p class="hint"><a href="/">Back to home</a></p>
+    </section>
+  </main>
+</body>
+</html>
